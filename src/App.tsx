@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 import Headex from './Components/Headex'
 import InputBox from './Components/InputBox'
+import List from './Components/List'
 import { Todo } from './Interface'
 
 const App: React.FC = () => {
@@ -14,15 +15,14 @@ const App: React.FC = () => {
 
     if (todo) {
       setTodos([...todos, { id: Date.now(), todo: todo, isDone: false }]);
-      console.log(todos)
       setTodo('')
-
     }
   }
   return (
-    <div className="App">
+    <div className="App" style={{ margin: '0rem 1rem', paddingTop: "env(safe-area-inset-top)" }}>
       <Headex />
       <InputBox todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+      <List todos={todos} setTodos={setTodos} />
     </div>
   )
 }

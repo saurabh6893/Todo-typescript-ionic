@@ -56,3 +56,28 @@ body {
   transform: scale(0.9);
   box-shadow: inset 0px 0px 12px black;
 }
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1%;
+}
+
+.todos > * {
+  background: rgb(0, 96, 94);
+  background: linear-gradient(
+    42deg,
+    rgba(0, 96, 94, 1) 11%,
+    rgba(0, 169, 231, 1) 75%
+  );
+  width: 50%;
+  text-align: center;
+  border: 2px solid black;
+  padding: 1% 0;
+  margin: 1%;
+  font-size: 30px;
+  border-radius: 15px;
+}
