@@ -79,7 +79,7 @@ body {
     rgba(0, 169, 231, 1) 75%
   );
   width: 50%;
-  min-width: 50vw;
+  min-width: 70vw;
   text-align: center;
   border: 2px solid black;
   padding: 0;
@@ -93,4 +93,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px) {
+  .inputbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inputt {
+    width: 90%;
+  }
+  .inputtbtn {
+    width: 50%;
+    margin-top: 10%;
+  }
 }
