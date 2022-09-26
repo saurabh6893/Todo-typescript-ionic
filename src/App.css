@@ -1,12 +1,17 @@
 body {
-  background-color: #58585f;
+  background-color: #a3a3a3;
+  padding: 0;
 }
 .App {
-  padding: 1% 5%;
+  padding: 0;
 }
 .head {
-  border-bottom: 2px solid black;
-  border-radius: 0 0 40% 20%;
+  background: rgb(208, 0, 0);
+  background: linear-gradient(
+    174deg,
+    rgba(208, 0, 0, 1) 9%,
+    rgba(129, 0, 0, 1) 72%
+  );
 }
 
 .head,
@@ -54,7 +59,7 @@ body {
 
 .inputtbtn:active {
   transform: scale(0.9);
-  box-shadow: inset 0px 0px 12px black;
+  box-shadow: inset 0px 0px 12px rgb(19, 51, 154);
 }
 
 .todos {
@@ -66,7 +71,7 @@ body {
   padding: 1%;
 }
 
-.todos > * {
+.todo {
   background: rgb(0, 96, 94);
   background: linear-gradient(
     42deg,
@@ -74,10 +79,18 @@ body {
     rgba(0, 169, 231, 1) 75%
   );
   width: 50%;
+  min-width: 50vw;
   text-align: center;
   border: 2px solid black;
-  padding: 1% 0;
-  margin: 1%;
+  padding: 0;
+  margin: 0.5%;
   font-size: 30px;
+  transition: all 0.5s ease-in-out;
   border-radius: 15px;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }

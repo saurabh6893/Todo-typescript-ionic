@@ -1,5 +1,6 @@
 import React from 'react'
 import { Todo } from '../Interface'
+import TodoTask from './TodoTask';
 interface Props {
   todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
@@ -9,9 +10,8 @@ const List: React.FC<Props> = ({ todos, setTodos }) => {
     <div className="todos">
       {
         todos.map((todo) => (
-          <div className="todo">
-            <h3>{todo.todo}</h3>
-            <button>X</button>
+          <div>
+            <TodoTask todo={todo} key={todo.id} todos={todos} setTodos={setTodos} />
           </div>
 
         ))
